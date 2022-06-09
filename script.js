@@ -1,15 +1,9 @@
 var enter;
-var confirmationUppercase;
-var confirmationLowercase;
 var confirmationNumber;
 var confirmationSymbols;
+var confirmationUppercase;
+var confirmationLowercase;
 var selections;
-
-var toUpper = function (x) {
-    return x.toUpperCase();
-};
-
-Uppercase = Lowercase.map(toUpper);
 
 Lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
@@ -19,11 +13,17 @@ numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 space = [];
 
+var toUpper = function (x) {
+    return x.toUpperCase();
+};
+
+Uppercase = Lowercase.map(toUpper);
+
 var generateBtn = document.querySelector("#generate");
 
 generateBtn.addEventListener("click", function () {
     ps = writePassword();
-    document.querySelector("#password").placeholder = ps;
+    document.getElementById("#password").placeholder = ps;
 });
 
 
@@ -38,9 +38,9 @@ function writePassword() {
 
     } else {
         confirmationUppercase = confirm("Will your password contain uppercase letters?");
-        confirmationLowercase = confirm("Will your password contain contain lowercase letters?");
-        confirmationNumber = confirm("Will your password contain contain numbers?");
-        confirmationSymbols = confirm("Will your password contain contain special characters?");
+        confirmationLowercase = confirm("Will your password contain lowercase letters?");
+        confirmationNumber = confirm("Will your password contain numbers?");
+        confirmationSymbols = confirm("Will your password contain special characters?");
     };
 
     if (!confirmationUppercase && !confirmationLowercase && !confirmationNumber && !confirmationSymbols) {
