@@ -1,14 +1,22 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+var enter;
+var confirmationNumber;
+var confirmationSymbols;
+var confirmationUppercase;
+var confirmationLowercase;
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+symbols = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
 
-  passwordText.value = password;
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-}
+Lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+space = [];
+
+var selections;
+
+var toUpper = function (x) {
+    return x.toUpperCase();
+};
+
+Uppercase = Lowercase.map(toUpper);
+
