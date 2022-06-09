@@ -28,7 +28,7 @@ var generateBtn = document.querySelector("#generate");
 
 generateBtn.addEventListener("click", function () {
     ps = writePassword();
-    document.getElementById("#password").placeholder = ps;
+    document.getElementById("#password");
 });
 
 // Setting up prompts making sure to keep them inbetween 8 - 128
